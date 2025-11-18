@@ -8,7 +8,7 @@
     <div class="py-2">
       <QrCode :data="qrData" class="bg-white size-52 mx-auto my-4 rounded-lg border border-surface-50 shadow-md">
         <div class="h-full w-full p-1 rounded-md bg-white">
-          <img :src="urlResolver(qrIcon)" class="size-full object-contain" />
+          <img :src="iconSrc" class="size-full object-contain" />
         </div>
       </QrCode>
       <p class="flex items-center justify-center gap-1 text-xs text-surface-500">
@@ -64,7 +64,7 @@ const props = defineProps({
     type: String,
     required: true
   },
-  qrIcon: {
+  iconSrc: {
     type: String,
     required: true
   }
@@ -77,6 +77,5 @@ const { t } = useI18n({
   messages: config.messages.NotMobileDialog
 });
 
-const urlResolver = useUrlResolver(import.meta.url);
 const currentUrl = computed(() => window.location.href);
 </script>
