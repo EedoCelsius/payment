@@ -119,5 +119,5 @@ const formatAccountPayload = (account) => bankData.amount?.krw
   : `${account.firm} ${account.number} ${account.holder}`;
 const standing = useElementBreakpoints(container, breakpointsContainer, { strategy: 'max-width' }).sm
 
-const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main')
+const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/firms/')
 </script>
