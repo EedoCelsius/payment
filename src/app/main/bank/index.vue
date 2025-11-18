@@ -33,15 +33,15 @@
           <div class="flex items-center gap-4 px-4 py-5">
             <div class="flex size-13 shrink-0 items-center justify-center rounded-full bg-surface shadow-sm @max-2xs:hidden">
               <img
-                :src="urlResolver(`../src/firms/${account.bank}.svg`)"
-                :alt="account.bank"
+                :src="urlResolver(`${account.firm}.svg`)"
+                :alt="account.firm"
                 class="size-10 object-contain"
               />
             </div>
 
             <div class="flex flex-col items-baseline gap-1">
               <div class="flex flex-wrap items-baseline gap-2">
-                <span class="text-xl font-bold">{{ account.bank }}</span>
+                <span class="text-xl font-bold">{{ account.firm }}</span>
                 <span class="text-sm">{{ account.holder }}</span>
               </div>
 
@@ -57,7 +57,7 @@
                   severity="contrast"
                   class="p-0 gap-1 leading-none"
                   :class="copiedAll || copiedNumbers ? 'text-success' : ''"
-                  :aria-label="t('copy.label.numbers', { bank: account.bank })"
+                  :aria-label="t('copy.label.numbers', { firm: account.firm })"
                   @click="copyNumbers"
                 />
               </CopyWrapper>
@@ -72,7 +72,7 @@
               iconPos="right"
               :label="!standing ? '' : copiedAll ? t('copy.copied.all') : t('copy.label.all')"
               :size="standing ? 'small' : 'large'"
-              :aria-label="t('copy.aria', { bank: account.bank })"
+              :aria-label="t('copy.aria', { firm: account.firm })"
               @click="copyAll"
             />
           </template>
@@ -115,8 +115,8 @@ const amountHTML = computed(() => (
 ));
 
 const formatAccountPayload = (account) => bankData.amount?.krw
-  ? `${account.bank} ${account.number} ${account.holder} [${bankData.amount.krw}원]`
-  : `${account.bank} ${account.number} ${account.holder}`;
+  ? `${account.firm} ${account.number} ${account.holder} [${bankData.amount.krw}원]`
+  : `${account.firm} ${account.number} ${account.holder}`;
 const standing = useElementBreakpoints(container, breakpointsContainer, { strategy: 'max-width' }).sm
 
 const urlResolver = useUrlResolver(import.meta.url)
