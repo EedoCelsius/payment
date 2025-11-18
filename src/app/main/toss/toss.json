@@ -3,7 +3,8 @@
         "krw": 10000
     },
     "account": {
-        "bank": "KB국민",
+        "firm": "KB국민",
+        "type": "bank",
         "number": "93800200352361",
         "holder": "강일준"
     },
