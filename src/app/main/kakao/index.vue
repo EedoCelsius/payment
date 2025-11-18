@@ -6,7 +6,7 @@
     @after-hide="router.replace('/')"
   />
 
-  <AppLaunchWrapper v-else active :deep-link="deepLink">
+  <AppLaunchWrapper v-else active :deep-link="kakaoData.deepLink">
     <LoadingMask>{{ t('loading.description') }}</LoadingMask>
 
     <template #success="{ relaunch }">
@@ -30,8 +30,8 @@
       <NotMobileDialog
         v-model:visible="visible"
         :app-name="appName"
-        :qr-data="deepLink"
-        :qr-icon="qrIcon"
+        :qr-data="kakaoData.deepLink"
+        :qr-icon="urlResolver('kakaotalk.svg')"
         @after-hide="router.replace('/')"
       />
     </template>
@@ -46,6 +46,7 @@ import { useRouter } from 'vue-router';
 import { AppLaunchWrapper } from '@/components/base';
 import { LoadingMask } from '@/components/ui';
 import { useLocaleResolver } from '@/composables/useLocaleResolver';
+import { useUrlResolver } from '@/composables/useUrlResolver'
 import SuccessDialog from '@/app/main/shared/SuccessDialog.vue';
 import NotInstalledDialog from '@/app/main/shared/NotInstalledDialog.vue';
 import NotMobileDialog from '@/app/main/shared/NotMobileDialog.vue';
@@ -66,6 +67,7 @@ const appName = useLocaleResolver({
 
 const router = useRouter();
 const disabledMessage = useLocaleResolver(kakaoData.disabled);
+const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/payments/')
 const { deepLink, qrIcon } = kakaoData;
 
 const visible = ref(true);
