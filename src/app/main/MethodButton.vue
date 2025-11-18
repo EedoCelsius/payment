@@ -72,6 +72,6 @@ const urlResolver = useUrlResolver(import.meta.url)
 const srcs = computed(() => {
   let files = fileMap[props.method]
   if (!Array.isArray(files)) files = [files]
-  return files.map(file => urlResolver(`./src/payments/${file}`))
+  return files.map(file => urlResolver(`https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/payments/${file}`))
 })
 </script>
