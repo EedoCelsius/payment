@@ -68,7 +68,7 @@ const fileMap = {
   alipay: 'alipay.svg'
 }
 
-const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/payments')
+const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/payments/')
 const srcs = computed(() => {
   let files = fileMap[props.method]
   if (!Array.isArray(files)) files = [files]
