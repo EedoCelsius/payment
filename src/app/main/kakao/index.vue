@@ -31,7 +31,7 @@
         v-model:visible="visible"
         :app-name="appName"
         :qr-data="kakaoData.deepLink"
-        :qr-icon="urlResolver('kakaotalk.svg')"
+        :icon-src="urlResolver('kakaotalk.svg')"
         @after-hide="router.replace('/')"
       />
     </template>
