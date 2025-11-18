@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": {
+      "en": "Checkout",
+      "ko": "결제하기"
+    }
+  },
+  "messages": {
+    "index": {
+      "en": {
+        "title": "Checkout",
+        "categories": {
+          "krw": "KRW payments",
+          "global": "Global payments"
+        }
+      },
+      "ko": {
+        "title": "결제하기",
+        "categories": {
+          "krw": "원화 결제",
+          "global": "글로벌 결제"
+        }
+      }
+    },
+    "MethodButton": {
+      "en": {
+        "labels": {
+          "kakao": "Kakao transfer",
+          "toss": "Toss transfer",
+          "bank": "Bank transfer",
+          "card": "Credit Card",
+          "alipay": "Alipay"
+        }
+      },
+      "ko": {
+        "labels": {
+          "kakao": "카카오송금",
+          "toss": "토스송금",
+          "bank": "계좌이체",
+          "card": "카드결제",
+          "alipay": "알리페이"
+        }
+      }
+    }
+  },
+  "routes": [ "./kakao", "./toss", "./bank", "./card", "./alipay" ]
+}

@@ -1,0 +1,12 @@
+{
+    "amount": {
+        "krw": 10000
+    },
+    "account": {
+        "bank": "KB국민",
+        "number": "93800200352361",
+        "holder": "강일준"
+    },
+    "deepLink": "toss://pay?amount=10000?bank=국민은행?numb=93800200352361",
+    "qrIcon": "../src/payments/toss.png"
+}

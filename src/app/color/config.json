@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": {
+      "en": "Color Palettes"
+    }
+  },
+  "messages": {
+    "index": {
+      "en": {
+        "title": "Color Tone Reference",
+        "description": "Compare each palette across the full tone range. Toggle the theme to see how tokens respond to dark mode.",
+        "baseLabel": "Base token",
+        "toneLabel": "Tone",
+        "toneSuffix": "",
+        "palettes": {
+          "primary": {
+            "label": "Primary",
+            "description": "Brand accent used for interactive highlights."
+          },
+          "surface": {
+            "label": "Surface",
+            "description": "Background canvas tokens for surfaces and panels."
+          },
+          "success": {
+            "label": "Success",
+            "description": "Positive feedback and confirmation messaging."
+          },
+          "warning": {
+            "label": "Warning",
+            "description": "Cautionary feedback and pending attention."
+          },
+          "danger": {
+            "label": "Danger",
+            "description": "Destructive actions and high-risk alerts."
+          },
+          "error": {
+            "label": "Error",
+            "description": "Validation errors and blocking states."
+          },
+          "info": {
+            "label": "Info",
+            "description": "Neutral notices and informational banners."
+          }
+        }
+      }
+    }
+  }
+}

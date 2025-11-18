@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "Project Base"
+  },
+  "routes": [
+    {
+      "src": "./main",
+      "path": ""
+    },
+    "./color"
+  ]
+}
