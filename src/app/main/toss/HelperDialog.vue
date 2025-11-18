@@ -17,7 +17,7 @@
           <div class="flex flex-col items-center gap-5">
             <div class="flex size-22 items-center justify-center rounded-3xl bg-surface-100/20 shadow-inner">
               <img
-                :src="urlResolver(`${tossData.account.type === 'bank' ? 'banks' : 'securities'}/${account.firm}.svg`)"
+                :src="urlResolver(`${tossData.account.type === 'bank' ? 'banks' : 'securities'}/${tossData.account.firm}.svg`)"
                 :alt="tossData.account.bank"
                 class="size-15 object-contain"
               />
