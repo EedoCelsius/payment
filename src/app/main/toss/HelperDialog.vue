@@ -17,7 +17,7 @@
           <div class="flex flex-col items-center gap-5">
             <div class="flex size-22 items-center justify-center rounded-3xl bg-surface-100/20 shadow-inner">
               <img
-                :src="urlResolver(`../src/firms/${tossData.account.bank}.svg`)"
+                :src="urlResolver(`${tossData.account.type === 'bank' ? 'banks' : 'securities'}/${account.firm}.svg`)"
                 :alt="tossData.account.bank"
                 class="size-15 object-contain"
               />
@@ -25,7 +25,7 @@
 
             <div class="space-y-2">
               <p class="text-2xl font-bold text-surface-900">
-                {{ tossData.account.bank }}
+                {{ tossData.account.firm }}
                 <span class="text-base font-medium text-surface-400">
                   ({{ tossData.account.holder }})
                 </span>
@@ -97,13 +97,13 @@ const clipboard = useClipboard();
 
 const accountPayload = computed(() => {
   return tossData.amount?.krw
-    ? `${tossData.account.bank} ${tossData.account.number} ${tossData.account.holder} [${tossData.amount.krw}원]`
-    : `${tossData.account.bank} ${tossData.account.number} ${tossData.account.holder}`;
+    ? `${tossData.account.firm} ${tossData.account.number} ${tossData.account.holder} [${tossData.amount.krw}원]`
+    : `${tossData.account.firm} ${tossData.account.number} ${tossData.account.holder}`;
 });
 const amountHTML = computed(() => (
   `<strong class="text-success-500">₩${tossData.amount?.krw?.toLocaleString(locale.value)}</strong>`
 ));
-const urlResolver = useUrlResolver(import.meta.url);
+const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main')
 
 const COUNTDOWN_SECONDS = 5;
 const countdown = useCountdown(COUNTDOWN_SECONDS * 1000, { 
