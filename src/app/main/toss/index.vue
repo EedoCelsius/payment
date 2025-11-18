@@ -34,7 +34,7 @@
       <NotMobileDialog
         :app-name="appName"
         :qr-data="tossData.deepLink"
-        :qr-icon="tossData.qrIcon"
+        :icon-src="urlResolver('toss.png')"
         @after-hide="visible = false"
       />
     </template>
@@ -49,6 +49,7 @@ import { useRouter } from 'vue-router';
 import { AppLaunchWrapper } from '@/components/base';
 import { LoadingMask } from '@/components/ui';
 import { useLocaleResolver } from '@/composables/useLocaleResolver';
+import { useUrlResolver } from '@/composables/useUrlResolver'
 import SuccessDialog from '@/app/main/shared/SuccessDialog.vue';
 import NotInstalledDialog from '@/app/main/shared/NotInstalledDialog.vue';
 import NotMobileDialog from '@/app/main/shared/NotMobileDialog.vue';
@@ -63,14 +64,12 @@ const { t } = useI18n({
   messages: config.messages.index
 });
 
-const router = useRouter();
-
-const appName = useLocaleResolver({
-  en: 'Toss',
-  ko: '토스'
-});
-
+const appName = useLocaleResolver({ en: 'Toss', ko: '토스' });
 const disabledMessage = useLocaleResolver(tossData.disabled);
+
+const router = useRouter();
+const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/payments/')
+
 const visible = ref(true);
 const active = ref(false);
 </script>
