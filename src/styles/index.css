@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+@layer color-base {
+  :root {
+    --light-base: #f0f0f0;
+    --dark-base: #0f0f0f;
+
+    --primary-base: #10b981;
+    --surface-base: #161616;
+    --success-base: var(--color-emerald-500);
+    --warning-base: var(--color-yellow-500);
+    --danger-base: var(--color-red-500);
+    --error-base: var(--color-red-500);
+    --info-base: var(--color-sky-500);
+    --help-base: var(--color-purple-500);
+  }
+
+  .dark {
+    /* --primary-base: */
+    /* --surface-base: */
+    /* --success-base: */
+    /* --warning-base: */
+    /* --danger-base: */
+    /* --error-base: */
+    /* --info-base: */
+    /* --help-base: */
+  }
+}
+
+.no-ripple .p-ink {
+  display: none !important;
+}
