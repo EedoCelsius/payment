@@ -33,7 +33,7 @@
           <div class="flex items-center gap-4 px-4 py-5">
             <div class="flex size-13 shrink-0 items-center justify-center rounded-full bg-surface shadow-sm @max-2xs:hidden">
               <img
-                :src="urlResolver(`${account.firm}.svg`)"
+                :src="urlResolver(`${account.type === 'bank' ? 'banks' : 'securities'}/${account.firm}.svg`)"
                 :alt="account.firm"
                 class="size-10 object-contain"
               />
@@ -119,5 +119,5 @@ const formatAccountPayload = (account) => bankData.amount?.krw
   : `${account.firm} ${account.number} ${account.holder}`;
 const standing = useElementBreakpoints(container, breakpointsContainer, { strategy: 'max-width' }).sm
 
-const urlResolver = useUrlResolver(import.meta.url)
+const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main')
 </script>
