@@ -60,15 +60,11 @@ const { t } = useI18n({
   messages: config.messages.index
 });
 
-const appName = useLocaleResolver({
-  en: 'KakaoTalk',
-  ko: '카카오톡'
-});
+const appName = useLocaleResolver({ en: 'KakaoTalk', ko: '카카오톡' });
+const disabledMessage = useLocaleResolver(kakaoData.disabled);
 
 const router = useRouter();
-const disabledMessage = useLocaleResolver(kakaoData.disabled);
 const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/payments/')
-const { deepLink, qrIcon } = kakaoData;
 
 const visible = ref(true);
 </script>
