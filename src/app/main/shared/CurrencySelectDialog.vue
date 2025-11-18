@@ -15,7 +15,7 @@
             class="flex w-full p-4 rounded-2xl border-surface-100 font-semibold shadow"
             @click="emit('select', currency)"
           >
-            <span class="flex-1 ml-2 text-left text-lg">{{ currency }}</span>
+            <span class="flex-1 ml-1 text-left text-lg">{{ currency }}</span>
             <i class="bx bx-chevron-right text-2xl text-primary" aria-hidden="true" />
           </Button>
         </li>
