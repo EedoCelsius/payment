@@ -103,7 +103,7 @@ const accountPayload = computed(() => {
 const amountHTML = computed(() => (
   `<strong class="text-success-500">₩${tossData.amount?.krw?.toLocaleString(locale.value)}</strong>`
 ));
-const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main')
+const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/firms/')
 
 const COUNTDOWN_SECONDS = 5;
 const countdown = useCountdown(COUNTDOWN_SECONDS * 1000, { 
