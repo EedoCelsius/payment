@@ -5,7 +5,7 @@
       class="absolute inset-0 h-full w-full transition ease-in-out"
       :class="i === activeIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'"
       :style="{ transitionDuration: `${transitionDuration}ms` }"
-      :aria-hidden="i === activeIndex ? 'false' : 'true'"
+      :aria-hidden="i !== activeIndex"
     >
       <component :is="entry" />
     </div>

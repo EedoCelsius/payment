@@ -4,7 +4,7 @@
       <h2>{{ title }}</h2>
     </template>
 
-    <div class="flex items-center" :class="icon ? 'gap-6 p-3' : ''">
+    <div class="flex items-center" :class="icon && 'gap-6 p-3'">
       <i v-if="icon" class="text-4xl" :class="icon" aria-hidden="true" />
       <slot>{{ description }}</slot>
     </div>
