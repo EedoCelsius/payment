@@ -1,5 +1,5 @@
 import path from 'path';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
 
 const APP_DIR = '/src/app';
 const configs = import.meta.glob('/src/app/**/config.json', { eager: true });
@@ -27,8 +27,10 @@ const buildRoutes = (dir, overrides = {}) => {
 };
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [buildRoutes(APP_DIR)]
+  history: import.meta.env.VITE_GITHUB_PAGES === 'true'
+    ? createWebHashHistory(import.meta.env.BASE_URL)   // GitHub Pages
+    : createWebHistory(import.meta.env.BASE_URL),      // 일반 도메인
+  routes: [buildRoutes(APP_DIR)],
 });
 
 export default router;
