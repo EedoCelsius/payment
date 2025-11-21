@@ -24,12 +24,10 @@ npm run dev
 │   │   └── */
 │   │       ├── index.vue   # 구성 파일에 매핑된 화면 루트
 │   │       └── config.json # 섹션별 메타데이터 및 자식 라우트 설정
-│   ├── components/
-│   │   ├── base/           # 프로젝트 전반에서 재사용 가능한 기본 컴포넌트
-│   │   └── ui/             # 기능 단위 UI 컴포넌트 (예: 다크 모드 토글)
+│   ├── components/         # Vue 컴포넌트
 │   ├── composables/        # 여러 컴포넌트에서 재사용하는 로직
 │   ├── plugins/            # plugins 초기화 및 설정
-│   ├── stores/             # Pinia 스토어 (테마, 언어 등 사용자 선호 저장)
+│   ├── stores/             # Pinia 스토어
 │   └── styles/
 │       └── index.css       # 전역 스타일 번들러
 ├── index.html              # Vite 진입 HTML
