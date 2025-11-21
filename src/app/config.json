@@ -11,6 +11,7 @@
       "src": "./main",
       "path": ""
     },
-    "./color"
+    "./color",
+    "./preview"
   ]
 }

@@ -19,7 +19,7 @@
       <div class="flex flex-1 flex-col gap-2">
         <span
           class="text-xl font-semibold text-surface-950"
-          :class="disabled ? 'line-through' : ''"  
+          :class="disabled && 'line-through'"
         >
           {{ t(`labels.${method}`) }}
         </span>

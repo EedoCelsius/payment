@@ -28,7 +28,7 @@
       >
         <ActionCard :standing
           class="items-center gap-0 rounded-2xl border border-neutral-500/10 bg-surface-100/10 shadow-sm transition duration-300"
-          :class="copiedAll ? 'text-success' : ''"
+          :class="copiedAll && 'text-success'"
         >
           <div class="flex items-center gap-4 px-4 py-5">
             <div class="flex size-13 shrink-0 items-center justify-center rounded-full bg-surface shadow-sm @max-2xs:hidden">
@@ -56,7 +56,7 @@
                   iconPos="right"
                   severity="contrast"
                   class="p-0 gap-1 leading-none"
-                  :class="copiedAll || copiedNumbers ? 'text-success' : ''"
+                  :class="(copiedAll || copiedNumbers) && 'text-success'"
                   :aria-label="t('copy.label.numbers', { firm: account.firm })"
                   @click="copyNumbers"
                 />
@@ -68,9 +68,9 @@
             <Button
               class="text-white size-full rounded-none border-none"
               :class="copiedAll ? 'bg-success' : 'bg-dark'"
-              :icon="copiedAll ? 'pi pi-check' : standing ? '' : 'pi pi-clipboard'"
+              :icon="copiedAll ? 'pi pi-check' : !standing && 'pi pi-clipboard'"
               iconPos="right"
-              :label="!standing ? '' : copiedAll ? t('copy.copied.all') : t('copy.label.all')"
+              :label="standing && (copiedAll ? t('copy.copied.all') : t('copy.label.all'))"
               :size="standing ? 'small' : 'large'"
               :aria-label="t('copy.aria', { firm: account.firm })"
               @click="copyAll"
