@@ -1,0 +1,18 @@
+{
+  "en": {
+    "title": "Continue in the app",
+    "description": "Complete the payment in the {appName} app. You can always come back if you need to try again.",
+    "actions": {
+      "relaunch": "Relaunch",
+      "close": "Close"
+    }
+  },
+  "ko": {
+    "title": "앱에서 계속 진행하세요",
+    "description": "{appName} 앱에서 결제를 진행해 주세요. 필요하면 돌아와 다시 시도할 수 있어요.",
+    "actions": {
+      "relaunch": "다시 열기",
+      "close": "닫기"
+    }
+  }
+}

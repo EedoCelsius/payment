@@ -1,0 +1,10 @@
+{
+  "en": {
+    "title": "Unavailable payment",
+    "description": "Unavailable due to technical issues. We'll resolve it as quickly as possible."
+  },
+  "ko": {
+    "title": "사용불가한 결제입니다",
+    "description": "기술적 문제로 사용할 수 없어요. 빠른 시일 내에 해결하겠습니다."
+  }
+}

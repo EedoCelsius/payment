@@ -1,0 +1,20 @@
+{
+  "en": {
+    "title": "Did the launch fail?",
+    "description": "If the app did not start, check whether {appName} is installed and try again.",
+    "actions": {
+      "copyLink": "Copy pay link",
+      "copied": "Copied",
+      "close": "Close"
+    }
+  },
+  "ko": {
+    "title": "앱이 실행되지 않았나요?",
+    "description": "앱으로 이동하지 않았다면 {appName} 설치 여부를 확인한 후 다시 시도해 주세요.",
+    "actions": {
+      "copyLink": "결제링크 복사",
+      "copied": "복사됨",
+      "close": "닫기"
+    }
+  }
+}

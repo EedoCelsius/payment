@@ -1,0 +1,22 @@
+{
+  "en": {
+    "title": "Available on mobile only",
+    "description": "The {appName} app only opens on mobile. Please try again on your phone.",
+    "caption": "Scan QR to open {appName}",
+    "actions": {
+      "copyLink": "Copy pay link",
+      "copied": "Copied",
+      "close": "Close"
+    }
+  },
+  "ko": {
+    "title": "모바일에서만 이용할 수 있어요",
+    "description": "{appName} 앱은 모바일에서만 열려요. 휴대폰에서 다시 시도해 주세요.",
+    "caption": "스캔해서 {appName} 앱으로 이동합니다",
+    "actions": {
+      "copyLink": "결제링크 복사",
+      "copied": "복사됨",
+      "close": "닫기"
+    }
+  }
+}

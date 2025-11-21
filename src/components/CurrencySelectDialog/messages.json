@@ -1,0 +1,18 @@
+{
+  "en": {
+    "title": "Choose a currency",
+    "description": "Select the currency you want to use for the payment.",
+    "empty": "No currencies are available right now. Please try again later.",
+    "actions": {
+      "close": "Close"
+    }
+  },
+  "ko": {
+    "title": "통화를 선택하세요",
+    "description": "결제에 사용할 통화를 선택하세요.",
+    "empty": "선택할 수 있는 통화가 없어요. 잠시 후 다시 시도해 주세요.",
+    "actions": {
+      "close": "닫기"
+    }
+  }
+}

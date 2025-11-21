@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": {
+      "en": "Alipay",
+      "ko": "알리페이"
+    }
+  },
+  "messages": {
+    "index": {
+      "en": {
+        "title": "Alipay",
+        "placeholder": "Lay out the Alipay integration details on this page."
+      },
+      "ko": {
+        "title": "알리페이",
+        "placeholder": "알리페이 연동 흐름을 이 페이지에서 계획하세요."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Project Base",
+    "description": {
+      "en": "Payment experience starter built with Vue 3, covering checkout flows, theming, and localization.",
+      "ko": "Vue 3 기반 결제 데모로 체크아웃 플로우, 테마, 다국어 구성을 함께 살펴보세요."
+    }
+  },
+  "routes": [
+    {
+      "src": "./main",
+      "path": ""
+    },
+    "./color"
+  ]
+}
