@@ -36,8 +36,11 @@ function unheadSetup() {
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:title', content: title },
             { name: 'twitter:description', content: description },
-            { name: 'theme-color', content: '#ffffff' },
-            { name: 'color-scheme', content: 'light dark' }
+            { name: 'color-scheme', content: 'only light' },
+            { name: 'theme-color', content: '#232323' }, // Chrome, Firefox, Opera
+            { name: 'msapplication-navbutton-color', content: '#232323' }, // Windows Phone
+            { name: 'apple-mobile-web-app-status-bar-style', content: '#232323' }, // iOS Safari
+            { name: 'apple-mobile-web-app-capable', content: 'yes' } // iOS Safari
         ],
         link: [
             { rel: 'canonical', href: canonicalUrl },
