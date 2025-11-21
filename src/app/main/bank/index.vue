@@ -91,7 +91,7 @@ import Dialog from 'primevue/dialog';
 import Button from 'primevue/button';
 import { DisabledDialog } from '@/components';
 import { ActionCard, CopyWrapper } from '@shared/components/base';
-import { breakpointsContainer, useElementBreakpoints, useLocaleResolver, useUrlResolver } from '@shared/composables';
+import { BREAKPOINTS, useElementBreakpoints, useLocaleResolver, useUrlResolver } from '@shared/composables';
 
 import config from './config.json';
 import bankData from './bank.json';
@@ -114,7 +114,7 @@ const amountHTML = computed(() => (
 const formatAccountPayload = (account) => bankData.amount?.krw
   ? `${account.firm} ${account.number} ${account.holder} [${bankData.amount.krw}원]`
   : `${account.firm} ${account.number} ${account.holder}`;
-const standing = useElementBreakpoints(container, breakpointsContainer, { strategy: 'max-width' }).sm
+const standing = useElementBreakpoints(container, BREAKPOINTS.CONTAINER, { strategy: 'max-width' }).sm
 
 const urlResolver = useUrlResolver('https://raw.githubusercontent.com/EedoCelsius/Korean-payment-icons/refs/heads/main/firms/')
 </script>
